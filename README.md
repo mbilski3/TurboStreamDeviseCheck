@@ -12,9 +12,9 @@ This is an example of a Rails app that uses Turbo Streams mixed with Turbo Frame
 
 `bundle install`
 
-`rails db:create`
+`rails db:setup`
 
-`rails db:seed`
+`rails s`
 
 ## Tests
 
