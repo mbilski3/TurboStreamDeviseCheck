@@ -1,0 +1,10 @@
+%article{ id: dom_id(tweet)}
+  %nav
+    %h6= tweet.user.email
+    %time= time_ago_in_words(tweet.created_at)
+  = tweet.content
+  .actions
+    - if stream
+      = turbo_frame_tag dom_id(tweet, 'actions'), src: actions_tweet_path(tweet)
+    - else
+      = render 'actions', tweet: tweet
