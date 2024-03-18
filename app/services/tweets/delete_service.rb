@@ -18,7 +18,7 @@ module Tweets
     private
 
     def broadcast_tweet
-      Turbo::StreamsChannel.broadcast_remove_to('tweets', target: dom_id(@tweet))
+      Turbo::MyStreamsChannel.broadcast_remove_to('tweets', target: dom_id(@tweet))
     end
   end
 end

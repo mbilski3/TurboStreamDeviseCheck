@@ -18,7 +18,7 @@ module Tweets
     private
 
     def broadcast_tweet(tweet)
-      Turbo::StreamsChannel.broadcast_prepend_to(
+      Turbo::MyStreamsChannel.broadcast_prepend_to(
         'tweets',
         target: 'tweets',
         partial: 'tweets/tweet',
