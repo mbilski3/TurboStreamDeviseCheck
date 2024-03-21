@@ -22,7 +22,7 @@ module Tweets
         'tweets',
         target: 'tweets',
         partial: 'tweets/tweet',
-        locals: { tweet: tweet, stream: true }
+        locals: { tweet: tweet, from_stream: true }
       )
     end
   end
